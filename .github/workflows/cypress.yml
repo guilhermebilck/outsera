@@ -11,17 +11,12 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
+    - name: Set up Cypress
+      uses: cypress-io/github-action@v6
       with:
-        node-version: '14.x'
-    
-    - name: Install Dependencies
-      run: npm ci
-    
-    - name: Run Cypress Tests
-      run: |
-        npx cypress run --record --key fed40982-547c-4cd4-b3c9-02a1ea91a286
-
-  env:
-   CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        start: npm start
+        wait-on: 'http://localhost:3000'
+        record: true
+        key: fed40982-547c-4cd4-b3c9-02a1ea91a286
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
