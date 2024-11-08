@@ -10,7 +10,7 @@ export default {
 
   signUp() {
     cy.get('#login2').click()
-    cy.get('#loginusername').click().type(username)
+    cy.get('#loginusername').click().clear().type(username)
     cy.get('#loginpassword').click().clear().type(password);
     cy.contains('button', 'Log in').click();
   },
