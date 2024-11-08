@@ -1,5 +1,3 @@
-# features/api_tests.feature
-
 Feature: API Tests
     As a tester
     I want to validate API responses
