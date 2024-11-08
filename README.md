@@ -1,4 +1,4 @@
-# Projeto - Avaliação Outsera - Automação de Testes
+# Projeto de Automação de Testes
 
 ## Como Instalar e Executar os Testes
 
